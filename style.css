@@ -747,9 +747,9 @@ i {
     z-index: 2;
     position: absolute;
     top: 330px;
-    margin-left: 133px;
-    width: 254px;
-    height: 56px;
+
+    left: 50%;
+    transform: translateX(-50%);
 
 }
 
@@ -919,6 +919,7 @@ i {
     top: 75%;
     margin-left: 190px;
     margin-top: 10px;
+
 }
 
 
@@ -1678,8 +1679,7 @@ span {
     }
 
     .b-left .bg-light-gray .btn-pink {
-        width: 200px;
-        height: 46px;
+
         top: 280px;
     }
 
