@@ -28,31 +28,32 @@
                 <div class="hamburger">
                     <div></div>
                     <ul class="hamburger-ul">
-                        <li><a href="#home-a">Overview</a></li>
-                        <li><a href="#home-b">Solutions</a></li>
-                        <li><a href="#home-c">Opportunities</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#home-a" class="nav-li">Overview</a></li>
+                        <li><a href="#home-b" class="nav-li">Solutions</a></li>
+                        <li><a href="#home-c" class="nav-li">Opportunities</a></li>
+                        <li><a href="#contact" class="nav-li">Contact</a></li>
                     </ul>
                 </div>
 
+
                 <ul class="navbar-ul">
-                    <li><a href="#home-a">Overview</a></li>
+                    <li><a href="#home-a" class="nav-li">Overview</a></li>
                     <li>Solutions <i class="fas fa-angle-down"></i>
-                        <ul>
+                        <ul class="navbar-ul">
                             <li><a href="#">Web Development</a></li>
                             <li><a href="#">Website Design</a></li>
                             <li><a href="#">Mobile Dev</a></li>
                             <li><a href="#">SEO</a></li>
                         </ul>
                     </li>
-                    <li><a href="#home-d">Benefits</a></li>
-                    <li><a href="#home-c">Opportunities</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#home-d" class="nav-li">Benefits</a></li>
+                    <li><a href="#home-c" class="nav-li">Opportunities</a></li>
+                    <li><a href="#contact" class="nav-li">Contact</a></li>
                 </ul>
 
                 <div class="nav-btns">
-                    <button class="btn-light"> <a href="#contact">Get a demo</a></button>
-                    <button class="btn-pink"> <a href="#contact">Let's Talk</a></button>
+                    <button class="btn-light"> <a href="#contact" class="btn">Get a demo</a></button>
+                    <button class="btn-pink"> <a href="#contact" class="btn">Let's Talk</a></button>
                 </div>
             </div>
         </div>
@@ -69,8 +70,8 @@
                             Know your customers better, do your marketing smarter
                             and manage the all Mall digital channels.
                         </p>
-                        <button class="btn-pink"><a href="#contact">Get a Demo</a></button>
-                        <button class="btn-light"><a href="#contact">See our features</a></button>
+                        <button class="btn-pink"><a href="#contact" class="btn">Get a Demo</a></button>
+                        <button class="btn-light"><a href="#home-a" class="btn">See our features</a></button>
                     </div>
                     <div class="rating">
                         <div class="rating-row">
@@ -88,7 +89,9 @@
 
                 <div class="right-content">
                     <div class="bg-light-gray"></div>
-                    <div class="left-phone"></div>
+                    <div class="left-phone">
+                        <img src="Images/iphone-left-manage.png" alt="">
+                    </div>
 
                     <div class="rectangle">
                         <div class="blur"></div>
@@ -101,6 +104,9 @@
                     </div>
 
                     <div class="right-phone">
+                        <div class="phone-photo">
+                            <img src="Images/iphone-right-manage-1.png" alt="">
+                        </div>
 
                         <div class="rectangle second">
                             <div class="blur"></div>
@@ -208,7 +214,7 @@
                             <h4>Collaborate with your tenants over <span class="gradient-text">digital platforms</span>
                             </h4>
                         </div>
-                        <button class="btn-pink"> <a href="#contact">Get a demo</a></button>
+                        <button class="btn-pink"> <a href="#">Get a demo</a></button>
                         <div class="desktop">
                             <img src="Images/desctop.png" alt="">
                         </div>
@@ -223,7 +229,7 @@
                         <div class="gray-bg">
                             <h3><span class="gradient-text">Mobile app</span> with mall loyalty program</h3>
                         </div>
-                        <button class="btn-pink"><a href="#contact">Try this</a></button>
+                        <button class="btn-pink"><a href="#">Try this</a></button>
                         <div class="phone">
                             <img src="Images/mobile.png" alt="">
                         </div>
@@ -258,8 +264,6 @@
 
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </div>
@@ -274,7 +278,7 @@
                     <ul class="advantages">
                         <li><i class="fas fa-chevron-right"></i> Mobile technology is easy to use</li>
                         <li><i class="fas fa-chevron-right"></i> Staying connected with your customers is easy</li>
-                        <li><i class="fas fa-chevron-right"></i> Empowered customers, employees adn merchants</li>
+                        <li><i class="fas fa-chevron-right"></i> Empowered customers, employees and merchants</li>
                         <li><i class="fas fa-chevron-right"></i> Saved costs and elevated ROI</li>
                     </ul>
                 </div>
@@ -585,8 +589,10 @@
         </div>
     </footer>
 
-
-    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <script src="js/scroll.js"></script>
 </body>
 
 </html>

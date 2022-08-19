@@ -114,8 +114,8 @@ i {
     display: flex;
     align-items: center;
     text-align: center;
-
 }
+
 
 .logo {
     display: flex;
@@ -124,48 +124,57 @@ i {
 
 .logo h1 {
     font-family: 'Monoton', cursive;
-
     font-size: 50px;
     background: radial-gradient(93.5% 204.81% at 6.5% 94.37%, #F18C53 0%, #E83A64 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transform: rotateZ(30deg)
+    transform: translateY(-80px);
+    transition: transform 1s ease;
+}
+
+.nav-row.show .logo h1 {
+    transform: rotateZ(30deg) translateY(0px);
 }
 
 .logo h2 {
     text-align: center;
     align-self: center;
     margin-top: 18px;
+    transform: translateY(-80px);
+    transition: transform 1s ease;
+}
+
+.nav-row.show .logo h2 {
+    transform: translateY(0);
 }
 
 .hamburger {
     display: none;
 }
 
-.nav-row ul {
+.nav-row .navbar-ul {
     list-style: none;
+    transform: translateY(-80px);
+    transition: transform 1s ease;
+}
 
-
+.nav-row.show .navbar-ul {
+    transform: translateY(0);
 }
 
 .nav-row ul li {
-
 
     color: #333;
     display: inline-block;
     padding: 1rem;
     font-size: 14px;
     position: relative;
-
-
 }
 
 .nav-row ul li ul {
     display: none;
 
 }
-
-
 
 .nav-row ul li:hover {
     cursor: pointer;
@@ -181,7 +190,6 @@ i {
     width: 180px;
     margin-top: 10px;
 
-
 }
 
 .nav-row ul li:hover ul li {
@@ -192,13 +200,9 @@ i {
 
 }
 
-
-
 .nav-row ul li ul li:hover {
 
     background: radial-gradient(93.5% 204.81% at 6.5% 94.37%, #F18C53 0%, #E83A64 100%);
-
-
 }
 
 .nav-row ul li ul li:hover a {
@@ -207,6 +211,12 @@ i {
 
 .nav-btns {
     margin-left: auto;
+    transform: translateY(-80px);
+    transition: transform 1s ease;
+}
+
+.nav-row.show .nav-btns {
+    transform: translateY(0);
 }
 
 /* Header */
@@ -221,6 +231,12 @@ i {
 
 .left-content {
     width: 47%;
+    transform: translateX(-500px);
+    transition: transform 1s ease;
+}
+
+.header-content.show .left-content {
+    transform: translateX(0);
 }
 
 .left-content .main-description h1 {
@@ -323,6 +339,12 @@ i {
 .right-content {
     position: relative;
     width: 53%;
+    transform: translateX(800px);
+    transition: transform 1s ease;
+}
+
+.header-content.show .right-content {
+    transform: translateX(0);
 }
 
 .bg-light-gray {
@@ -333,8 +355,8 @@ i {
     margin-left: 108px;
 }
 
-.right-content .left-phone {
-    background: url('Images/iphone-left-manage.png')no-repeat center center /cover;
+.right-content .left-phone img {
+
     position: absolute;
     width: 386.34px;
     height: 478.71px;
@@ -342,9 +364,7 @@ i {
     left: 0;
     background-position: cover;
 
-
 }
-
 
 .rectangle {
     width: 227px;
@@ -406,20 +426,27 @@ i {
 }
 
 .right-content .right-phone {
-    background: url('Images/iphone-right-manage-1.png')no-repeat center center /cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.right-content .right-phone .phone-photo img {
+
     position: absolute;
     width: 394.44px;
     height: 486.57px;
     top: 50px;
-    right: 0;
+    left: 250px;
     background-position: cover;
 }
 
 .rectangle.second {
-    left: 180px;
+    position: absolute;
+    left: 400px;
     top: 220px;
-
-
 }
 
 .nike-logo {
@@ -460,6 +487,12 @@ i {
     top: 390px;
     width: 197px;
     height: 54px;
+    transform: translateX(-300px);
+    transition: transform 1s ease;
+}
+
+#home-a.show .shopping-content .rectangle.second {
+    transform: translateX(0);
 }
 
 
@@ -471,8 +504,12 @@ i {
     height: 540px;
     border-radius: 40px;
     position: relative;
+    transform: translateX(-700px);
+    transition: transform 1s ease;
+}
 
-
+#home-a.show .shopping-photo {
+    transform: translateX(0);
 }
 
 .pink-bg {
@@ -524,7 +561,13 @@ i {
     border: 1px solid #F9FAFB;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
     z-index: 1;
+    transform: translateY(400px);
+    transition: transform 1.2s ease-in;
 
+}
+
+#home-a.show .app-screen {
+    transform: translateY(0);
 }
 
 .app-nav {
@@ -684,6 +727,12 @@ i {
     margin-left: 50px;
     margin-top: 80px;
     width: 480px;
+    transform: translateX(600px);
+    transition: transform 1s ease;
+}
+
+#home-a.show .section-content-info {
+    transform: translateX(0);
 }
 
 .section-content-info h2 {
@@ -711,18 +760,29 @@ i {
 
 .heading h2 {
     margin-bottom: 10px;
+    transform: translateY(120px);
+    transition: transform 1.2s ease-in;
+}
+
+#home-b.show .heading h2 {
+    transform: translateY(0);
 }
 
 .heading p {
     width: 372px;
     margin: auto;
     margin-bottom: 70px;
+    transform: translateY(120px);
+    transition: transform 1.2s ease-in;
+}
+
+#home-b.show .heading p {
+    transform: translateY(0);
 }
 
 .flex-home-b {
     display: flex;
     justify-content: space-between;
-
 }
 
 
@@ -730,7 +790,13 @@ i {
     position: relative;
     width: 100%;
     height: 100%;
+    transform: translateY(200px);
+    transition: transform 1s ease-in;
+    transition-delay: 300ms;
+}
 
+#home-b.show .b-left {
+    transform: translateY(0);
 }
 
 .b-section.bg-light-gray {
@@ -747,7 +813,6 @@ i {
     z-index: 2;
     position: absolute;
     top: 330px;
-
     left: 50%;
     transform: translateX(-50%);
 
@@ -766,20 +831,23 @@ i {
 .b-left .text {
     z-index: 2;
     text-align: center;
-
     font-size: 24px;
     font-weight: 700;
     width: 343px;
     margin: 260px auto;
-
-
 }
 
 .b-right {
     position: relative;
     width: 100%;
     height: 60vh;
+    transform: translateY(200px);
+    transition: transform 1s ease-in;
+    transition-delay: 300ms;
+}
 
+#home-b.show .b-right {
+    transform: translateY(0);
 }
 
 .b-section.bg-light-gray.right {
@@ -873,15 +941,12 @@ i {
 
 }
 
-
-
 .phone-rectangle.right {
     position: absolute;
     top: 170px;
     right: 40px;
     display: flex;
     justify-content: space-between;
-
     align-items: center;
 }
 
@@ -911,7 +976,6 @@ i {
 
 .b-right h3 {
     margin-top: 35px;
-
 }
 
 .b-right button {
@@ -935,11 +999,23 @@ i {
 
 #home-c .section-content-info h2 {
     font-size: 44px;
+    transform: translateX(-1200px);
+    transition: transform 1s ease;
+}
+
+#home-c.show .section-content-info h2 {
+    transform: translateX(-600px);
 }
 
 #home-c .section-content-info .advantages {
     list-style: none;
     margin-top: 20px;
+    transform: translateX(-1200px);
+    transition: transform 1s ease;
+}
+
+#home-c.show .section-content-info .advantages {
+    transform: translateX(-600px);
 }
 
 #home-c .section-content-info .advantages li {
@@ -957,7 +1033,12 @@ i {
 
 #home-c .shopping-photo {
     background: url('Images/blond-girl.jfif') no-repeat center center /cover;
+    transform: translateX(700px);
+    transition: transform 1.2s ease;
+}
 
+#home-c.show .shopping-photo {
+    transform: translateX(0);
 }
 
 #home-c .shopping-photo .sales {
@@ -981,6 +1062,13 @@ i {
     border: 1px solid #F9FAFB;
     border-radius: 25.375px;
     z-index: 1;
+    transform: translateY(400px);
+    transition: transform 1s ease-in;
+
+}
+
+#home-c.show .shopping-item {
+    transform: translateY(0);
 }
 
 #home-c .shopping-item p {
@@ -1066,6 +1154,14 @@ i {
 #home-d .section-d-header {
     display: flex;
     justify-content: space-between;
+    opacity: 0;
+    transform: translateY(120px);
+    transition: opacity 0.3s ease, transform 1s ease-in;
+}
+
+#home-d.show .section-d-header {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 #home-d .section-d-header .chevron {
@@ -1109,6 +1205,14 @@ span {
     background: #F9FAFB;
     border-radius: 40px;
     padding: 45px;
+    opacity: 0;
+    transform: translateY(120px);
+    transition: opacity 0.3s ease, transform 1s ease-in;
+}
+
+#home-d.show .card {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 #home-d .card .flex {
@@ -1173,7 +1277,15 @@ span {
     margin-bottom: 50px;
     font-size: 2.2rem;
     padding: 0 200px;
+    opacity: 0;
+    transform: translateY(200px);
+    transition: opacity 0.3s ease, transform 1s ease-in;
 
+}
+
+#home-e.show .header {
+    transform: translateY(0px);
+    opacity: 1;
 }
 
 .e-flex {
@@ -1192,7 +1304,13 @@ span {
 .map-1 {
     position: relative;
     width: 270px;
+    transform: translateX(-400px);
+    transition: transform 1s ease;
 
+}
+
+.map-1.show {
+    transform: translateX(0);
 }
 
 .map-1 .rectangle.second {
@@ -1214,6 +1332,14 @@ span {
 .map-2 {
     width: 270px;
     position: relative;
+    transform: translateY(300px);
+    opacity: 0;
+    transition: transform 1s ease, opacity 0.3s ease;
+}
+
+.map-2.show {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .map-2 .brand-logo {
@@ -1250,11 +1376,18 @@ span {
 .map-3 {
     width: 270px;
     position: relative;
+    transform: translateX(400px);
+    transition: transform 1s ease;
+}
+
+.map-3.show {
+    transform: translateX(0px);
 }
 
 .map-3 .rectangle {
     left: 60px;
     top: 220px;
+
 }
 
 .e-btn {
@@ -1262,6 +1395,14 @@ span {
     width: 100%;
     align-items: center;
     justify-content: center;
+    opacity: 0;
+    transform: translateY(150px);
+    transition: transform 1s ease, opacity 0.3s ease;
+}
+
+#home-e.show .e-btn {
+    transform: translateY(0px);
+    opacity: 1;
 }
 
 .e-btn .btn-pink {
@@ -1278,6 +1419,12 @@ span {
 #contact {
     background: #F9FAFB;
     padding: 50px 0px 150px 0px;
+    transform: translateY(400px);
+    transition: transform 1s ease-in;
+}
+
+#contact.show {
+    transform: translateY(0px);
 }
 
 .flex {
@@ -1286,9 +1433,18 @@ span {
     justify-content: space-between;
 }
 
+#contact .contact-info {
+    transform: translateX(-650px);
+    transition: transform 1s ease-in;
+    transition-delay: 700ms;
+}
+
+#contact.show .contact-info {
+    transform: translateX(0);
+}
+
 .contact-info h2 {
     font-size: 3.5rem;
-
     line-height: 3rem;
     margin-bottom: 30px;
 }
@@ -1316,6 +1472,15 @@ span {
     margin-bottom: 5px;
 }
 
+#contact .contact-form {
+    transform: translateX(650px);
+    transition: transform 1s ease-in;
+    transition-delay: 700ms;
+}
+
+#contact.show .contact-form {
+    transform: translateX(0);
+}
 
 .form {
     display: flex;
@@ -1324,7 +1489,6 @@ span {
     flex-wrap: wrap;
 
 }
-
 
 .label {
     position: relative;
@@ -1402,7 +1566,12 @@ span {
 #footer {
     background: #17181b;
     color: #fff;
+    transform: translateY(150px);
+    transition: transform 1s ease;
+}
 
+#footer.show {
+    transform: translateY(0px);
 }
 
 
@@ -1417,6 +1586,13 @@ span {
     color: #fff;
 }
 
+.footer-header .logo h1 {
+    transform: translateY(0px);
+}
+
+.footer-header .logo h2 {
+    transform: translateY(0px);
+}
 
 .footer-btns {
     margin-top: 20px;
@@ -1602,7 +1778,7 @@ span {
         font-size: 14px;
     }
 
-    .right-content .left-phone {
+    .right-content .left-phone img {
         width: 326.34px;
         height: 418.71px;
         top: 150px;
@@ -1617,11 +1793,15 @@ span {
         left: 50px;
     }
 
-    .right-content .right-phone {
+    .rectangle.second {
+        left: 350px;
+    }
+
+    .right-content .right-phone .phone-photo img {
         width: 326.34px;
         height: 418.71px;
         top: 100px;
-        right: 50px;
+        left: 200px;
     }
 
 
@@ -1806,7 +1986,7 @@ span {
         width: 60%;
     }
 
-    .right-content .left-phone {
+    .right-content .left-phone img {
         top: 50px;
 
     }
@@ -1815,14 +1995,15 @@ span {
         top: 350px;
     }
 
-    .right-content .right-phone {
+    .right-content .right-phone .phone-photo img {
         top: 10px;
         right: -40px;
 
     }
 
     .rectangle.second {
-        left: 120px;
+        top: 150px;
+        left: 340px;
     }
 
     .bg-light-gray {
@@ -1837,7 +2018,7 @@ span {
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        margin-bottom: 60px;
+        margin-bottom: 30px;
     }
 
     .heading h2 {
@@ -1857,11 +2038,7 @@ span {
         margin-bottom: 150px;
         display: flex;
         justify-self: flex-start;
-
-
     }
-
-
 
     .phone-rectangle.left {
         left: 140px;
@@ -1988,9 +2165,12 @@ span {
         border-radius: 10px;
         cursor: pointer;
         padding: 7px;
+        opacity: 0;
+        transition: opacity 1.2s ease-in;
+    }
+
+    .hamburger.show {
         opacity: 1;
-
-
     }
 
 
@@ -2089,8 +2269,8 @@ span {
     }
 
 
-    .right-content .left-phone {
-        left: -70px;
+    .right-content .left-phone img {
+        left: 0px;
     }
 
     .bg-light-gray {
@@ -2115,6 +2295,9 @@ span {
 
 @media(max-width:650px) {
 
+    .header-content {
+        margin-top: 10px;
+    }
 
     .left-content .main-description h2 {
         font-size: 1.8rem;
@@ -2130,34 +2313,40 @@ span {
         margin-bottom: 20px;
     }
 
-    .right-content .left-phone {
+    .right-content .left-phone img {
         width: 250px;
         height: 300px;
-        background-position-y: 1px;
+        top: 40px;
+        left: -80px;
     }
 
-    .right-content .right-phone {
+    .right-content .right-phone .phone-photo img {
         width: 250px;
         height: 300px;
-        right: -70px;
-        background-position-y: 1px;
+        left: 30px;
     }
 
     .bg-light-gray {
         height: 400px;
+
     }
 
     .rectangle {
         top: 250px;
-        left: -70px;
+        left: -80px;
     }
 
     .rectangle.second {
-        left: 60px;
-        top: 100px;
+        left: 80px;
+        top: 130px;
     }
 
     #home-a {
+        margin-top: -50px;
+        margin-bottom: 50px;
+    }
+
+    .shopping-content {
         margin-bottom: 50px;
     }
 
@@ -2223,6 +2412,7 @@ span {
         margin-left: 0;
         margin-top: 80px;
         text-align: center;
+        transition-delay: 1.2s;
     }
 
     .section-content-info h2 {
@@ -2241,7 +2431,15 @@ span {
     }
 
     #home-b .heading {
-        margin-top: 10px;
+        margin-top: 0px;
+    }
+
+    .flex-home-b {
+        margin-bottom: 0px;
+    }
+
+    .heading p {
+        width: 100%;
     }
 
     .b-left .desktop img {
@@ -2256,14 +2454,6 @@ span {
         font-size: 18px;
     }
 
-    .b-left .bg-light-gray .btn-pink {
-        width: 200px;
-        height: 45px;
-
-
-        margin-left: 50%;
-        transform: translateX(-50%);
-    }
 
     .b-section.bg-light-gray.right {
         width: 330px;
@@ -2288,15 +2478,40 @@ span {
         transform: translateX(-50%);
     }
 
+    #home-c .container-body {
+        padding-bottom: 0px;
+    }
+
+    #home-c .section-content-info h2 {
+        font-size: 1.8rem;
+        margin-top: 0px;
+    }
+
+    #home-c .advantages {
+        text-align: start;
+
+    }
+
+    #home-c .section-content-info .advantages li {
+        font-size: 12px;
+    }
 
     #home-c .shopping-photo .sales {
         width: 90px;
         height: 40px;
+
+    }
+
+    #home-c .shopping-content {
+        margin-top: 20px;
     }
 
     #home-c .shopping-item {
         width: 180px;
         height: 250px;
+        top: 200px;
+        transition-delay: 1s;
+
     }
 
     #home-c .shopping-item p {
@@ -2373,11 +2588,15 @@ span {
     }
 
     #home-e {
-        margin-top: 50px;
+        margin-top: 10px;
     }
 
     #home-e .header {
         font-size: 1.2rem;
+    }
+
+    #home-e .description {
+        margin-bottom: 30px;
     }
 
     #contact {
@@ -2407,6 +2626,11 @@ span {
         align-items: center;
         justify-content: center;
 
+    }
+
+    .checkbox-div {
+        width: 100%;
+        height: 100%;
     }
 
     .contact-us img {
