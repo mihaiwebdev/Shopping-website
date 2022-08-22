@@ -178,7 +178,7 @@ i {
 
 .nav-row ul li:hover {
     cursor: pointer;
-    opacity: 0.8;
+    opacity: 0.98;
 
 }
 
@@ -188,16 +188,13 @@ i {
     position: absolute;
     left: 0;
     width: 180px;
-    margin-top: 10px;
-
 }
 
 .nav-row ul li:hover ul li {
     display: block;
-
     background: #F9FAFB;
     padding: 10px;
-
+    margin: 0;
 }
 
 .nav-row ul li ul li:hover {
@@ -289,7 +286,7 @@ i {
     height: 48px;
     border: 2px solid #F9FAFB;
     border-radius: 50%;
-    background: url('Images/avatar1.png')no-repeat center center/cover,
+    background: url('Images/avatar1-cut.png')no-repeat center center/cover,
         #d4b5ad;
 
 }
@@ -299,7 +296,7 @@ i {
     height: 48px;
     border: 2px solid #F9FAFB;
     border-radius: 50%;
-    background: url('Images/avatar2.png')no-repeat center center/cover,
+    background: url('Images/avatar2-cut.png')no-repeat center center/cover,
         #b6cdd8;
     position: absolute;
     left: 98px;
@@ -311,7 +308,7 @@ i {
     height: 48px;
     border: 2px solid #F9FAFB;
     border-radius: 50%;
-    background: url('Images/avatar3.png')no-repeat center center/cover,
+    background: url('Images/avatar3-cut.png')no-repeat center center/cover,
         #b8c7b6;
     position: absolute;
     left: 132px;
@@ -323,7 +320,7 @@ i {
     height: 48px;
     border: 2px solid #F9FAFB;
     border-radius: 50%;
-    background: url('Images/avatar4.png')no-repeat center center/cover,
+    background: url('Images/avatar4-cut.png')no-repeat center center/cover,
         #d1dfc3;
     position: absolute;
     left: 166px;
@@ -467,18 +464,19 @@ i {
 
 
 #home-a {
-    margin-bottom: 100px;
+    margin-top: 50px;
+    margin-bottom: 80px;
 }
 
 #home-a .container-body {
     max-width: 1280px;
+    height: 100%;
 }
 
 .shopping-content {
     position: relative;
     margin-top: 80px;
-
-    padding: 30px 60px;
+    padding: 30px 60px 100px 60px;
 }
 
 .shopping-content .rectangle.second {
@@ -497,7 +495,7 @@ i {
 
 
 .shopping-photo {
-    background: url('Images/blonde-girls.jpg') no-repeat center center /cover,
+    background: url('Images/blonde-girls-cut.jpg') no-repeat center center /cover,
         linear-gradient(180.19deg, rgba(0, 0, 0, 0) 0.16%, rgba(0, 0, 0, 0) 59.34%, rgba(233, 59, 101, 0.48) 99.84%);
 
     width: 540px;
@@ -755,13 +753,13 @@ i {
 
 #home-b .heading {
     text-align: center;
-
+    margin-bottom: 150px;
 }
 
 .heading h2 {
     margin-bottom: 10px;
     transform: translateY(120px);
-    transition: transform 1.2s ease-in;
+    transition: transform 1s ease;
 }
 
 #home-b.show .heading h2 {
@@ -773,7 +771,7 @@ i {
     margin: auto;
     margin-bottom: 70px;
     transform: translateY(120px);
-    transition: transform 1.2s ease-in;
+    transition: transform 1s ease;
 }
 
 #home-b.show .heading p {
@@ -782,7 +780,9 @@ i {
 
 .flex-home-b {
     display: flex;
-    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 450px;
 }
 
 
@@ -803,10 +803,10 @@ i {
     width: 520px;
     height: 435px;
     position: absolute;
-    top: 100px;
-    left: -33px;
+    top: 0px;
+    left: 0px;
     border-radius: 40px;
-
+    margin-left: 30px;
 }
 
 .b-left .bg-light-gray .btn-pink {
@@ -840,19 +840,15 @@ i {
 .b-right {
     position: relative;
     width: 100%;
-    height: 60vh;
+    height: 100%;
     transform: translateY(200px);
     transition: transform 1s ease-in;
     transition-delay: 300ms;
+
 }
 
 #home-b.show .b-right {
     transform: translateY(0);
-}
-
-.b-section.bg-light-gray.right {
-    right: 0;
-
 }
 
 .b-right .phone img {
@@ -875,8 +871,8 @@ i {
 
 .phone-rectangle.left {
     position: absolute;
-    top: 80px;
-    left: 95px;
+    top: 0px;
+    left: 35px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -927,7 +923,6 @@ i {
 .b-right-content .nike-logo {
     background-color: #F9FAFB;
     align-self: flex-end;
-
 }
 
 .b-right-content p {
@@ -938,31 +933,21 @@ i {
     color: #F18C53;
     padding: 8px 15px;
     border-radius: 5.2px;
-
 }
 
 .phone-rectangle.right {
     position: absolute;
-    top: 170px;
+    top: 80px;
     right: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 1;
 }
 
-.phone-rectangle.right .b-left-content i {
-    color: #fff;
-    left: -13px;
-}
-
-.phone-rectangle.right .b-right-content i {
-    color: #fff;
-    right: -9px;
-}
-
-.b-right .gray-bg {
-    background-color: #F9FAFB;
+.b-right .text {
     position: absolute;
+    background: #F9FAFB;
     top: 55%;
     left: 50%;
     transform: translateX(-50%);
@@ -971,7 +956,6 @@ i {
     width: 343px;
     font-size: 20px;
     z-index: 1;
-
 }
 
 .b-right h3 {
@@ -983,11 +967,8 @@ i {
     top: 75%;
     margin-left: 190px;
     margin-top: 10px;
-
+    z-index: 1;
 }
-
-
-
 
 /* Section C */
 
@@ -1032,7 +1013,7 @@ i {
 }
 
 #home-c .shopping-photo {
-    background: url('Images/blond-girl.jfif') no-repeat center center /cover;
+    background: url('Images/blond-girl-cut.jpg') no-repeat center center /cover;
     transform: translateX(700px);
     transition: transform 1.2s ease;
 }
@@ -1542,8 +1523,6 @@ span {
     color: #94959f;
 }
 
-
-
 .checkbox-div span {
     font-weight: bold;
 }
@@ -1587,7 +1566,7 @@ span {
 }
 
 .footer-header .logo h1 {
-    transform: translateY(0px);
+    transform: translateY(0px) rotateZ(38deg);
 }
 
 .footer-header .logo h2 {
@@ -1785,7 +1764,6 @@ span {
 
     }
 
-
     .rectangle {
         width: 207px;
         height: 50px;
@@ -1803,7 +1781,6 @@ span {
         top: 100px;
         left: 200px;
     }
-
 
     .shopping-photo {
         width: 480px;
@@ -1859,7 +1836,6 @@ span {
     }
 
     .b-left .bg-light-gray .btn-pink {
-
         top: 280px;
     }
 
@@ -1880,7 +1856,7 @@ span {
     }
 
     .phone-rectangle.left {
-        left: 80px;
+        left: 0px;
     }
 
     .phone-rectangle.left i {
@@ -1888,7 +1864,6 @@ span {
     }
 
     .b-right .gray-bg {
-
         height: 60px;
     }
 
@@ -1907,11 +1882,16 @@ span {
 
     #home-c .flex {
         justify-content: flex-start;
-        margin-top: -80px;
+        margin-top: 0px;
+        align-items: flex-start;
     }
 
     #home-c .section-content-info h2 {
         font-size: 35px;
+    }
+
+    .shopping-content {
+        margin-top: 0px;
     }
 
     #home-c .section-content-info .advantages li {
@@ -2012,6 +1992,12 @@ span {
 
     #home-a .container-body .flex {
         flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .section-content-info {
+        margin-top: 10px;
     }
 
     .flex-home-b {
@@ -2019,6 +2005,11 @@ span {
         justify-content: flex-start;
         align-items: center;
         margin-bottom: 30px;
+        padding-bottom: 10px;
+    }
+
+    #home-b .heading {
+        margin-bottom: 20px;
     }
 
     .heading h2 {
@@ -2041,30 +2032,32 @@ span {
     }
 
     .phone-rectangle.left {
-        left: 140px;
+        left: 180px;
         top: 65px;
     }
 
     .phone-rectangle.right {
-        right: 150px;
+        right: 200px;
+        top: 180px;
     }
 
 
     #home-c .flex {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-
-
 
     #home-d .flex {
         flex-direction: column;
-
-
     }
 
     #home-d .card {
         margin-bottom: 50px;
+    }
 
+    #home-d .card:last-of-type {
+        margin-bottom: 0px;
     }
 
     #home-d .customer-rating {
@@ -2084,6 +2077,14 @@ span {
     #home-e .header {
         font-size: 1.8rem;
         margin-top: 0px;
+    }
+
+    .map-img {
+        margin-bottom: 5px;
+    }
+
+    .map-2 {
+        margin: 50px 0px;
     }
 
     #contact .flex {
@@ -2243,7 +2244,8 @@ span {
 
     .hamburger-ul li a {
         font-size: 1.1rem;
-        color: black;
+        color: #555;
+        font-weight: bold;
 
     }
 
@@ -2261,13 +2263,12 @@ span {
         left: 0;
         width: 100%;
         height: 100%;
-        background: #ddd;
+        background: #F9FAFB;
         border-radius: 0px 0px 15px 15px;
         padding: 10px 0;
         opacity: 0.98;
         z-index: 2;
     }
-
 
     .right-content .left-phone img {
         left: 0px;
@@ -2326,8 +2327,14 @@ span {
         left: 30px;
     }
 
+    .right-content {
+        margin-bottom: 80px;
+    }
+
     .bg-light-gray {
-        height: 400px;
+        height: 350px;
+        margin-left: 0px;
+        width: 300px;
 
     }
 
@@ -2410,7 +2417,7 @@ span {
     .section-content-info {
         width: 100%;
         margin-left: 0;
-        margin-top: 80px;
+        margin-top: 0px;
         text-align: center;
         transition-delay: 1.2s;
     }
@@ -2454,6 +2461,9 @@ span {
         font-size: 18px;
     }
 
+    .b-section.bg-light-gray {
+        margin-bottom: 100px;
+    }
 
     .b-section.bg-light-gray.right {
         width: 330px;
@@ -2471,6 +2481,10 @@ span {
 
     .b-right h3 {
         font-size: 20px;
+    }
+
+    .b-right .text {
+        width: 200px;
     }
 
     .b-right button {
@@ -2504,6 +2518,7 @@ span {
 
     #home-c .shopping-content {
         margin-top: 20px;
+        margin-bottom: 0px;
     }
 
     #home-c .shopping-item {
@@ -2511,6 +2526,7 @@ span {
         height: 250px;
         top: 200px;
         transition-delay: 1s;
+        left: 70px;
 
     }
 
@@ -2536,6 +2552,10 @@ span {
         height: 30px;
     }
 
+    #home-d {
+        margin-top: 80px;
+    }
+
     #home-d .section-d-header .chevron {
         display: none;
     }
@@ -2553,10 +2573,13 @@ span {
         padding: 25px;
     }
 
+    #home-d .card:last-of-type {
+        display: none;
+    }
+
     #home-d .card .flex h4 {
         width: 100%;
         font-size: 18px;
-
     }
 
     #home-d .card p {
@@ -2578,12 +2601,12 @@ span {
 
 
     #home-d .customer-rating .customer-info small {
-        font-size: 12px;
+        font-size: 10px;
         line-height: 5px;
     }
 
-    #home-d .customer-rating .stars {
-        display: none;
+    #home-d .customer-rating .stars i {
+        width: 10px;
 
     }
 
