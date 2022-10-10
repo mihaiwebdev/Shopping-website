@@ -26,8 +26,6 @@ const mapOne = document.querySelector('.map-1');
 const mapTwo = document.querySelector('.map-2');
 const mapThree = document.querySelector('.map-3');
 const contact = document.getElementById('contact');
-const footer = document.getElementById('footer');
-
 
 
 function showDOMElements(el) {
@@ -57,10 +55,6 @@ function showDOMElements(el) {
     }
     if (el >= contact.offsetTop) {
         contact.classList.add('show');
-    }
-
-    if (el >= footer.offsetTop + 200) {
-        footer.classList.add('show');
     }
 
 };

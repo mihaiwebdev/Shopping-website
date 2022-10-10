@@ -1545,13 +1545,10 @@ span {
 #footer {
     background: #17181b;
     color: #fff;
-    transform: translateY(150px);
     transition: transform 1s ease;
 }
 
-#footer.show {
-    transform: translateY(0px);
-}
+
 
 
 .footer-header {
@@ -2228,11 +2225,11 @@ span {
         justify-content: center;
         width: 100%;
         border-radius: 0px 0px 15px 15px;
-        padding-top: 50px;
+        padding-top: 60px;
+        padding-bottom: 25px;
         z-index: -1;
         transform: translateY(-500px);
         transition: transform 0.5s ease;
-        height: 40vh;
 
     }
 
@@ -2244,7 +2241,7 @@ span {
 
     .hamburger-ul li a {
         font-size: 1.1rem;
-        color: #555;
+        color: #333;
         font-weight: bold;
 
     }
@@ -2263,11 +2260,13 @@ span {
         left: 0;
         width: 100%;
         height: 100%;
-        background: #F9FAFB;
+        background: #d4b5ad;
+        filter: blur(4px);
         border-radius: 0px 0px 15px 15px;
         padding: 10px 0;
-        opacity: 0.98;
+        opacity: 1;
         z-index: 2;
+
     }
 
     .right-content .left-phone img {
